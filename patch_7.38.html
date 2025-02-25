@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Patch Notes 7.38</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>DOTA 2 Wiki</h1>
+    <nav class="top-nav">
+      <!-- PATCHES -->
+      <div class="dropdown-patches">
+        <button>PATCHES</button>
+        <ul class="dropdown-content">
+          <li><a href="patch_7.38.html">Patch 7.38</a></li>
+        </ul>
+      </div>
+      <!-- HOME (odkaz rovnou) -->
+      <div class="home-link">
+        <a href="index.html">HOME</a>
+      </div>
+      <!-- HEROES -->
+      <div class="dropdown-heroes">
+        <button>HEROES</button>
+        <ul class="dropdown-content">
+          <li><a href="LegionCommander.html">Legion Commander</a></li>
+          <li><a href="Hoodwink.html">Hoodwink</a></li>
+          <li><a href="Weaver.html">Weaver</a></li>
+          <li><a href="Wisp.html">IO</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-links">
+      <a href="#general">GENERAL UPDATES</a> |
+      <a href="#items">ITEM UPDATES</a> |
+      <a href="#heroes">HERO UPDATES</a>
+    </div>
+  </header>
+
+  <main class="patchnotes-layout">
+
+    <!-- Patch Title -->
+    <section class="patch-title">
+      <h1>Gameplay Update <span class="patch-number">7.38</span></h1>
+      <p>WAYS OF THE WATER</p>
+    </section>
+
+    <!-- General Updates -->
+    <section class="general-updates" id="general">
+      <h2>GENERAL UPDATES</h2>
+
+      <ol>
+        <!-- 1) Major Mechanics -->
+        <!-- 1) Major Mechanics -->
+        <li>Major Mechanics
+          <ul>
+            <li>Universal Heroes' damage per attribute decreased from 0.7 to 0.45</li>
+            <li>As a result, many heroes had their Base Damage and Attribute changes</li>
+            <li>Skill points can now be spent on All Attributes starting at level 2 instead of level 5</li>
+
+            <!-- Reflected Spells -->
+            <li>Reflected spells no longer gain Aghanim's Scepter upgrades
+              <ul>
+                <li>They now benefit from all bonuses the original caster had, including:
+                  <ul>
+                    <li>Caster's text upgrades</li>
+                    <li>Bonuses from talents</li>
+                    <li>Aghanim's Shard and Aghanim's Scepter effects</li>
+                    <li>Upgrades that used to depend on the reflecting unit’s items</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Slow Resist and Movement Speed -->
+            <li>Slows now also reduce minimum movement speed by the slow resist percentage
+              <ul>
+                <li>Minimum movement speed baseline effectively increased from 100 to 120 when under Slow Resistance
+                </li>
+              </ul>
+            </li>
+
+            <!-- Scepter CD -->
+            <li>Cooldown on Aghanim’s Scepter upgrades reduced from 120s to 90s</li>
+
+            <!-- Extra details from images -->
+            <li>Glyph of Fortification: Creep duration changed from 4s to 3s</li>
+            <li>Units no longer gain bonus movement speed during the night</li>
+            <li>Heroes that enter a Hero’s backpack for the first time have a 3s grace period to swap into main
+              inventory with no cooldown (once per Hero)</li>
+          </ul>
+        </li>
+
+        <!-- 2) Roshan -->
+        <li>Roshan
+          <ul>
+            <li>Roshan is back in the river, with one pit located near each sidelane</li>
+            <li>Top lair is slightly closer to Dire’s jungle entrance, bottom lair is closer to Radiant’s</li>
+            <li>Only the active Roshan pit shows as a minimap icon</li>
+            <li>Roshan initially spawns in the bottom lair at minute 5, then alternates top/bottom every time he
+              respawns</li>
+
+            <!-- Roshan Movement & Day/Night -->
+            <li>Starting at 15:00, Roshan follows the day/night cycle, traveling across the river
+              <ul>
+                <li>Moves to the Top pit at night, Bottom pit at day</li>
+                <li>Ignores attempts to block him (but will throw heroes away if they attack or stand in his path)</li>
+                <li>If attacked or obstructed while moving:
+                  <ul>
+                    <li>Throws the hero ~1500 distance, dealing 200 pure damage + 1s stun</li>
+                    <li>Removes 40% of the target’s current HP each throw</li>
+                    <li>Each throw grants Roshan +10 damage until he reaches his destination</li>
+                    <li>After 3 throws, he ignores heroes completely</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>Roshan no longer has bonus movement speed while traveling between pits</li>
+            <li>Roshan now has 25% Slow Resistance + an additional 25% when running between pits</li>
+
+            <!-- Extra Roshan Mechanics -->
+            <li>When Roshan is killed, his travel status is removed until next spawn (timer updates to show he may be
+              traveling again)</li>
+            <li>Added a minimap Roshan icon that shows his possible travel area</li>
+            <li>“Road of Retribution” (the path Roshan takes):
+              <ul>
+                <li>Applies a 25-range Disarm to affected units</li>
+                <li>Knocks units back 600 units, dealing 200 pure damage</li>
+                <li>Has a random chance for additional “Bash” effects and new visuals</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- 3) Wandering Waters -->
+        <li>Wandering Waters
+          <ul>
+            <li>The top and bottom river areas are now flooded by streams of traversable water</li>
+            <li>New pathing routes connect near the T3 towers down to the T1 towers (former Twin Gate location)</li>
+            <li>Going upstream reduces movement speed by 10% (downstream gives a small speed bonus)</li>
+            <li>Units can still attack or cast spells normally while in water</li>
+            <li>Water-based abilities have special visuals on this terrain</li>
+
+            <!-- Additional Stream Details from Images -->
+            <li>Streams have two zones: “strong current” up to +150 MS, “moderate current” up to +100 MS</li>
+            <li>Speed bonus depends on facing direction (100% downstream to 0% at 90°)</li>
+            <li>Watchers, camps, and pathways adjusted around these new water routes</li>
+            <li>Radiant and Dire jungles each have a moderate-current stream starting near the easy camp, joining the
+              main river near the T2 towers</li>
+          </ul>
+        </li>
+
+        <!-- 4) Tormentor -->
+        <li>Tormentor
+          <ul>
+            <li>Spawns at minute 20 in the corners near each offlane T2 tower</li>
+            <li>Has 2000 HP + 10 armor, respawns 5 minutes after being slain</li>
+            <li>Killing a Tormentor grants +1 Aghanim’s Shard to a random allied hero without one</li>
+            <li>Damage reflection increased from 70% to 80%</li>
+
+            <!-- Additional Tormentor Info from Images -->
+            <li>Now also grants 250 gold to each allied hero upon death</li>
+            <li>Tormentor spawns first at the Radiant side (night), then at the Dire side (day), alternating with Roshan
+            </li>
+            <li>Tormentor’s abilities scale over time or with number of deaths:
+              <ul>
+                <li>Unyielding Shield: Base 500 + (200 per minute of game)</li>
+                <li>Barricading Barrier: Base 300 + (75 per minute of game)</li>
+                <li>Reflect damage: 50% + (2% per minute of game)</li>
+                <li>The Shining: DPS increased from 30 to 60, radius changed from 1200 to 1000</li>
+                <li>Alleviation (new): After dying, leaves a 900-radius aura that grants +2% max HP regen for 15s</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- 5) Map Objectives -->
+        <li>Map Objectives
+          <ul>
+            <li>Neutral watchers, outposts, and minor objectives rearranged near new watery paths</li>
+            <li>Early push towers have slightly reduced armor to encourage early rotations</li>
+            <li>Added new mini-watchers near the side shops</li>
+            <li>Creep aggro range increased from 500 to 550</li>
+          </ul>
+        </li>
+
+        <!-- 6) Additional Balances -->
+        <li>Additional Balances
+          <ul>
+            <li>Glyph of Fortification cooldown increased from 8 to 10 minutes</li>
+            <li>Glyph now grants 20% tower damage reduction for 5 seconds after effect ends</li>
+            <li>This can only happen once per Tier 2 tower</li>
+            <li>Roshan respawns 20s faster after each kill</li>
+            <li>Water Rune mechanic near the river side shops reworked (stacks up to 2 charges)</li>
+          </ul>
+        </li>
+
+        <!-- 7) Shrines of Wisdom -->
+        <li>Shrines of Wisdom
+          <ul>
+            <li>Wisdom Runes removed and replaced with new buildings: Shrines of Wisdom</li>
+            <li>Located in the offlane side jungles between Tier 1 and 2 towers where Ancient camps used to be</li>
+            <li>Each Shrine activates every 7 minutes, glowing and filling with experience</li>
+            <li>To gather XP, a hero must stand within 300 units for 3s</li>
+            <li>If an enemy enters the Shrine’s radius, the timer is paused until the enemy leaves or is killed</li>
+            <li>XP is granted to a random hero within 300 units, plus the teammate with the lowest XP</li>
+          </ul>
+        </li>
+
+      </ol>
+    </section>
+
+
+    <!-- Item Updates -->
+    <section class="item-updates" id="items">
+      <h2>ITEM UPDATES</h2>
+
+      <!-- Abyssal Blade -->
+      <div class="item-change">
+        <img src="Images/UpdatedItems/Abyssal_Blade_icon.webp" alt="Abyssal Blade" class="item-icon">
+        <div class="item-details">
+          <h3>Abyssal Blade</h3>
+          <!-- <p class="item-status">(ITEM REWORKED)</p> případně, pokud chceš -->
+          <ul>
+            <li>Recipe changed</li>
+            <li>Now requires Skull Basher (2875), Sange (2100) and a 175 gold recipe. Total cost unchanged at 6250</li>
+            <li>Used to require Skull Basher (2875), Vanguard (1700) and a 1675 gold recipe</li>
+            <li>Now provides: +35 Damage, +26 Strength, +25% Slow Resistance, +25% Health and Lifesteal Amp</li>
+            <li>No longer provides +250 Health and +10 Health Regen</li>
+            <li>Removed Damage Block ability</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Battle Fury -->
+      <div class="item-change">
+        <img src="Images/UpdatedItems/Battle_Fury_icon.webp" alt="Battle Fury" class="item-icon">
+        <div class="item-details">
+          <h3>Battle Fury</h3>
+          <ul>
+            <li>Recipe changed</li>
+            <li>Now requires the second Broadsword (1000) instead of Claymore (1350)</li>
+            <li>Recipe cost increased from 450 to 600. Total cost decreased from 4100 to 3900</li>
+            <li>Bonus Damage decreased from +65 to +50</li>
+            <li>Cleave damage to heroes decreased from 70% to 60%</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Heaven's Halberd (ITEM REMOVED) -->
+      <div class="item-change">
+        <img src="Images/UpdatedItems/Heaven_Halberd_icon.webp" alt="Heaven's Halberd" class="item-icon">
+        <div class="item-details">
+          <h3>Heaven's Halberd</h3>
+          <p class="item-status" style="color:#ffcc00;">(ITEM REMOVED)</p>
+          <ul>
+            <li>Requires Vanguard (1700), Crown (450), Ring of Regen (175) and a 275 gold recipe. Total cost: 2600</li>
+            <li>Provides +7.5 Health, +6 Health Regen and +5 All Attributes</li>
+            <li><strong>Passive: Damage Block</strong> – 60% chance to block 60 damage on melee, 30 on ranged</li>
+            <li><strong>Active: Disarm</strong> – Now can be dispelled. Mana Cost 75 → 25. Duration on Ranged heroes 5s
+              → 4s</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gleipnir (ITEM REWORKED) -->
+      <div class="item-change">
+        <img src="Images/UpdatedItems/Gleipnir_icon.webp" alt="Gleipnir" class="item-icon">
+        <div class="item-details">
+          <h3>Gleipnir</h3>
+          <p class="item-status" style="color:#ffcc00;">(ITEM REWORKED)</p>
+          <ul>
+            <li>Recipe changed</li>
+            <li>Now requires Point Booster (1200) instead of Maelstrom (2950)</li>
+            <li>Recipe cost increased from 550 to 1100. Total cost decreased from 5750 to 4550</li>
+            <li>Now provides +75 AoE Bonus and +200 Mana</li>
+            <li>Eternal Chains cast range increased from 300 to 400</li>
+            <li>Eternal Chains no longer deals damage</li>
+            <li>Eternal Chains radius decreased from 350 to 275 (effective radius unchanged due to item’s AoE Bonus)
+            </li>
+            <li>Eternal Chains manacost decreased from 200 to 100</li>
+            <li>Removed Chain Lightning ability</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mage Slayer -->
+      <div class="item-change">
+        <img src="Images/UpdatedItems/Mage_Slayer_icon.webp" alt="Mage Slayer" class="item-icon">
+        <div class="item-details">
+          <h3>Mage Slayer</h3>
+          <ul>
+            <li>Now requires Gloves of Haste (450), Cloak (800) and a 400 gold recipe</li>
+            <li>Total cost decreased from 2825 to 2800</li>
+            <li>Used to require Oblivion Staff (1625), Cloak (800) and 900 gold recipe</li>
+            <li>Now provides +5 Health Regen and +8 Damage</li>
+            <li>Attack Damage reduced from +20 to +18</li>
+            <li>Magic Resist bonus decreased from +45 to +30</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Khanda (ITEM REWORKED) -->
+      <div class="item-change">
+        <img src="Images/UpdatedItems/Khanda_icon.webp" alt="Khanda" class="item-icon">
+        <div class="item-details">
+          <h3>Khanda</h3>
+          <p class="item-status" style="color:#ffcc00;">(ITEM REWORKED)</p>
+          <ul>
+            <li>Now requires Tiara of Selemene (1800) instead of Crystals (2000)</li>
+            <li>Recipe cost increased from 550 to 700</li>
+            <li>Total cost increased from 5100 to 5900</li>
+            <li>Now provides +8 Mana Regen instead of +50 Damage</li>
+            <li>Removed Critical Strike ability</li>
+            <li>Empower Spell now ignores deal attack damage</li>
+            <li>Empower Spell bonus damage increased from 50% to 80%</li>
+            <li>Empower Spell now applies Break to the target</li>
+            <li>Empower Spell cooldown decreased from 50s to 30s</li>
+            <li>Empower Spell buff duration increased from 15s to 12s</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Revenant's Brooch -->
+      <div class="item-change">
+        <img src="Images/UpdatedItems/Revenants_Brooch_icon.webp" alt="Revenant's Brooch" class="item-icon">
+        <div class="item-details">
+          <h3>Revenant's Brooch</h3>
+          <ul>
+            <li>Requires Crystals (2000), Voodoo Mask (700) and a 600 gold recipe. Total cost: 3300</li>
+            <li>Provides +25 Damage and +16% Spell Lifesteal</li>
+            <li><strong>Passive: Phantom Critical</strong> – 30% chance to deal bonus magical damage = 80% of the
+              attack’s damage</li>
+            <li>Phantom Crit can’t be applied to the same target more than once per second</li>
+            <li>Replaces your Attack Speed with +8 Damage (no effect on buildings)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Updates -->
+    <section class="hero-updates" id="heroes">
+      <h2>HERO UPDATES</h2>
+
+      <!-- Ancient Apparition -->
+      <div class="hero-change">
+        <img src="Images/UpdatedHeroes/Ancient_Apparition_icon.webp" alt="Ancient Apparition" class="hero-icon">
+        <div class="hero-details">
+          <h3>Ancient Apparition</h3>
+          <ul>
+            <li><strong>Cold Feet:</strong> Stun duration rescaled from 1.9/2.2/2.5/2.8 to 1.8/2.2/2.6/3.0</li>
+            <li><strong>Chilling Touch:</strong> Attack range bonus from 60/120/180/240 to 80/160/200/240</li>
+            <li><strong>Ice Blast:</strong> Scepter Mana Cost reduction decreased from 50% to 40%</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Axe -->
+      <div class="hero-change">
+        <img src="Images/UpdatedHeroes/Axe_icon.webp" alt="Axe" class="hero-icon">
+        <div class="hero-details">
+          <h3>Axe</h3>
+          <ul>
+            <li>Base damage increased by 1</li>
+            <li>Damage at level 1 increased from 55-59 to 56-60</li>
+            <li><strong>Battle Hunger:</strong> Damage per second from 10/15/20/25 to 12/18/24/30</li>
+            <li><strong>Counter Helix:</strong> Damage rescaled from 95/120/145/170 to 100/120/140/160</li>
+            <li>Aghanim's Scepter Attack Damage Reduction decreased from 20% to 15%</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Drow Ranger -->
+      <div class="hero-change">
+        <img src="Images/UpdatedHeroes/Drow_Ranger_icon.webp" alt="Drow Ranger" class="hero-icon">
+        <div class="hero-details">
+          <h3>Drow Ranger</h3>
+          <ul>
+            <li><strong>Precision Aura:</strong> Now works with Marksmanship</li>
+            <li>Self Agility percentage bonus reworked from 2% per hero to 4/8/12/16% per level</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Earth Spirit -->
+      <div class="hero-change">
+        <img src="Images/UpdatedHeroes/Earth_Spirit_icon.webp" alt="Earth Spirit" class="hero-icon">
+        <div class="hero-details">
+          <h3>Earth Spirit</h3>
+          <ul>
+            <li><strong>Rolling Boulder:</strong> Bonus movespeed is also granted to Earth Spirit when rolling over an
+              allied hero</li>
+            <li><strong>Boulder Smash:</strong> No longer deals bonus damage to creeps</li>
+            <li><strong>Geomagnetic Grip:</strong> Damage increased from 50/125/200/275 to 70/140/210/280</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Elder Titan -->
+      <div class="hero-change">
+        <img src="Images/UpdatedHeroes/Elder_Titan_icon.webp" alt="Elder Titan" class="hero-icon">
+        <div class="hero-details">
+          <h3>Elder Titan</h3>
+          <ul>
+            <li><strong>Astral Spirit:</strong> Bonus Speed (Heroes) decreased from 5/6/7/8% to 4/5/6/7%</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Ember Spirit -->
+      <div class="hero-change">
+        <img src="Images/UpdatedHeroes/Ember_Spirit_icon.webp" alt="Ember Spirit" class="hero-icon">
+        <div class="hero-details">
+          <h3>Ember Spirit</h3>
+          <ul>
+            <li><strong>Searing Chains:</strong> Unit count decreased from 3 to 2</li>
+            <li><strong>Flame Guard:</strong> Damage per second increased from 15/20/25/30 to 20/30/40/50;
+              Magic Barrier increased from 60/135/210/285 to 60/140/200/300</li>
+            <li><strong>Fire Remnant:</strong> Cast Point decreased from 0.2s to 0s</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hoodwink -->
+      <div class="hero-change">
+        <img src="Images/UpdatedHeroes/Hoodwink_icon.webp" alt="Hoodwink" class="hero-icon">
+        <div class="hero-details">
+          <h3>Hoodwink</h3>
+          <ul>
+            <li>Base Agility increased from 24 to 25</li>
+            <li><strong>Mistwoods Wayfarer:</strong> [Add lines if needed]</li>
+            <li><strong>Acorn Shot:</strong> [Add lines if needed]</li>
+            <li><strong>Sharpshooter:</strong> [Add lines if needed]</li>
+            <li><strong>Talents:</strong> [Add lines if needed]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dota 2 Wiki</p>
+    <p class="validator-links">
+      <a href="https://validator.w3.org/nu/" target="_blank">Validate HTML</a> |
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validate CSS</a> |
+      <a href="https://achecks.org/achecker" target="_blank">WCAG Validation</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>

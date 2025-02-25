@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legion Commander</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>DOTA 2 Wiki</h1>
+    <nav class="top-nav">
+      <!-- PATCHES -->
+      <div class="dropdown-patches">
+        <button>PATCHES</button>
+        <ul class="dropdown-content">
+          <li><a href="patch_7.38.html">Patch 7.38</a></li>
+        </ul>
+      </div>
+      <!-- HOME (odkaz rovnou) -->
+      <div class="home-link">
+        <a href="index.html">HOME</a>
+      </div>
+      <!-- HEROES -->
+      <div class="dropdown-heroes">
+        <button>HEROES</button>
+        <ul class="dropdown-content">
+          <li><a href="LegionCommander.html">Legion Commander</a></li>
+          <li><a href="Hoodwink.html">Hoodwink</a></li>
+          <li><a href="Weaver.html">Weaver</a></li>
+          <li><a href="Wisp.html">IO</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-links">
+      <a href="#facets">FACETS</a> |
+      <a href="#voiceLines">VOICE LINES</a>
+    </div>
+  </header>
+
+  <!-- Toggle pro light/dark v pravém rohu -->
+  <div class="theme-toggle-wrapper">
+    <label for="themeSwitch">Dark/Light:</label>
+    <input type="checkbox" id="themeSwitch">
+  </div>
+
+  <main class="hero-layout">
+
+    <!-- Horní řádek: vlevo popis, uprostřed video, vpravo schopnosti -->
+    <section class="hero-top">
+      <!-- Vlevo: popis -->
+      <div class="hero-description">
+        <div class="attr-name">
+          <p>STRENGTH <img src="Images/Atributes/hero_strength.png"></p>
+        </div>
+        <br>
+        <h2><Label>LEGION <BR>COMMANDER</Label></h2>
+        <br>
+        <p>
+          Marching across the battlefield, Legion Commander challenges lone enemies in single combat. Each duel she wins
+          increases the power of her attacks, until at last she can become a relentless one-woman army.
+        </p>
+        <br>
+        <h3>ATTACK TYPE</h3><br>
+        <p>MELLE</p> <img src="Images/Stats/icon_damage.png">
+        <br>
+      </div>
+
+      <!-- Uprostřed: showcase (video) vystředěný -->
+      <div class="hero-showcase">
+        <h3>LEGION COMMANDER</h3>
+        <br>
+        <video autoplay muted loop preload="auto" width="300">
+          <source src="Videos/LegionCommander_Afk.webm" type="video/webm">
+        </video>
+      </div>
+
+      <!-- Vpravo: schopnosti ve sloupci s tooltipem -->
+      <div class="hero-abilities-extended">
+        <h3>ABILITIES</h3>
+        <div class="abilities-column">
+
+          <!-- Jedna schopnost (ikona s tooltipem, název vedle) -->
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/innate_icon.png" alt="Innate Ability">
+              <div class="tooltip-text">
+                <h4>Outfight Them!</h4>
+                <br>
+                <p>Attacking an enemy hero that is higher level than you increases your HP regeneration, lifesteal, and
+                  incoming heals by 50% for 4s.</p>
+              </div>
+            </div>
+            <span>Outfight Them!</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/Overwhelming_odds_icon.webp" alt="Ability Q">
+              <div class="tooltip-text">
+                <h4>Overwhelming Odds</h4>
+                <br>
+                <p>Turns the enemies' numbers against them, dealing damage per unit or per hero and granting you bonus
+                  attack speed. Deals bonus damage to illusions and summoned units as a percent of their current health.
+                  Can be cast during Duel.</p>
+              </div>
+            </div>
+            <span>Overwhelming Odds</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/Press_the_Attack_icon.webp" alt="Ability W">
+              <div class="tooltip-text">
+                <h4>Press the Attack</h4>
+                <br>
+                <p>Removes debuffs and disables from the target friendly unit, and grants bonus movement speed and
+                  health regen for a short time.</p>
+              </div>
+            </div>
+            <span>Press the Attack</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/Moment_of_Courage_icon.webp" alt="Ability E">
+              <div class="tooltip-text">
+                <h4>Moment of Courage</h4>
+                <br>
+                <p>When attacked, Legion Commander has a chance to immediately counterattack with bonus lifesteal.</p>
+              </div>
+            </div>
+            <span>Moment of Courage</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/Duel_icon.webp" alt="Ultimate R">
+              <div class="tooltip-text">
+                <h4>Duel</h4>
+                <br>
+                <p>Legion Commander and the target enemy hero are forced to attack each other for a short duration.
+                  Neither hero can use items or abilities, with the exception of Legion Commander being able to cast
+                  Overwhelming Odds. If either hero dies during the duration, the hero winning the Duel gains permanent
+                  bonus damage.</p>
+              </div>
+            </div>
+            <span>Duel</span>
+          </div>
+
+        </div> <!-- .abilities-column -->
+      </div> <!-- .hero-abilities-extended -->
+    </section>
+
+    <!-- Druhý řádek: Atributy, Role, Statistiky -->
+    <section class="hero-info-row">
+      <!-- Atributy -->
+      <div class="hero-attributes">
+        <div class="portrait-section">
+          <img src="images/LegionCommander/Legion_Commander_icon.webp" alt="Hero Portrait" class="hero-portrait">
+          <div class="hp-mana">
+            <div class="stat-line-hp">
+              <span>600</span>
+            </div>
+            <div class="stat-line-mana">
+              <span>300</span>
+            </div>
+          </div>
+        </div>
+        <div class="attributes-right">
+          <div class="attr">
+            <img src="Images/Atributes/hero_strength.png" alt="Strength" class="attr-icon">
+            <span class="attr-label">STR:</span>
+            <span class="attr-value">24 + 3.1</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_agility.png" alt="Agility" class="attr-icon">
+            <span class="attr-label">AGI:</span>
+            <span class="attr-value">18 + 1.7</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_intelligence.png" alt="Intelligence" class="attr-icon">
+            <span class="attr-label">INT:</span>
+            <span class="attr-value">20 + 2.2</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role -->
+      <div class="hero-roles-extended">
+        <h4>ROLE</h4>
+        <div class="roles-grid">
+          <div class="role-item">
+            <span class="role-label">Carry</span>
+            <div class="role-bar"><span style="width: 30%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Support</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Nuker</span>
+            <div class="role-bar"><span style="width: 30%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Disabler</span>
+            <div class="role-bar"><span style="width: 70%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Jungler</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Durable</span>
+            <div class="role-bar"><span style="width: 30%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Escape</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Pusher</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Initiator</span>
+            <div class="role-bar"><span style="width: 50%"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistiky -->
+      <div class="hero-stats">
+        <h4>Statistiky</h4>
+        <div class="stats-grid">
+          <div class="stat-line">
+            <img src="Images/Stats/icon_damage.png" alt="Damage" class="stat-icon">
+            <span>50 - 54</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_range.png" alt="Attack Range" class="stat-icon">
+            <span>150 (melee)</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_movement_speed.png" alt="Movement Speed" class="stat-icon">
+            <span>300</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_armor.png" alt="Armor" class="stat-icon">
+            <span>5</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_time.png" alt="Attack Speed" class="stat-icon">
+            <span>1.7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Třetí řádek: Facety -->
+    <section class="hero-facets-extended fade-up" id="facets">
+      <h3>FACET DETAILS</h3>
+      <div class="facet-box">
+        <div class="facet-box-StonehallPlate">
+          <img src="Images/Stats/icon_armor.png">
+          <h4>STONEHALL PLATE</h4>
+        </div>
+        <p>
+          Overwhelming Odds grants an all damage barrier based on the damage it deals to enemy heroes.
+        </p>
+        <div class="facet-detail">
+          <img src="Images/LegionCommander/Overwhelming_odds_icon.webp" alt="Overwhelming Odds">
+          <strong>Overwhelming Odds</strong>
+        </div>
+        <p>
+          Overwhelming Odds grants an all damage barrier based on the damage it deals to enemy heroes.
+        </p>
+        <p class="bonus-info">
+          DAMAGE TO BARRIER: 40%<br>
+          BARRIE DURATION: 6s
+        </p>
+      </div>
+      <div class="facet-box">
+        <div class="facet-box-SpoilsOfWar">
+          <img src="Images/Stats/icon_damage.png">
+          <h4>SPOILS OF WAR</h4>
+        </div>
+        <p>
+          When a Duel is won, units that damaged the loser during the Duel will gain permanent bonus damage. If Legion
+          Commander won the Duel, she will automatically cast Press the Attack on herself and assisting allies.
+        </p>
+        <div class="facet-detail">
+          <img src="Images/LegionCommander/Duel_icon.webp" alt="Duel Icon">
+          <strong>Duel</strong>
+        </div>
+        <p>
+          When a Duel is won, units that damaged the loser during the Duel will gain permanent bonus damage. If Legion
+          Commander won the Duel, she will automatically cast Press the Attack on herself and assisting allies.
+        </p>
+        <p class="bonus-info">
+          ASSIST BONUS DAMAGE: 5 / 10 / 15 <br>
+        </p>
+      </div>
+    </section>
+
+    <!-- Hlášky hrdiny -->
+    <section class="hero-voice-lines" id="voiceLines">
+      <h3>LEGION COMMANDER VOICELINES</h3>
+
+      <!-- Jedna hláška (Legion Commander) -->
+      <div class="voice-line" data-audio="Voices\LegionCommander\i_will_crush_you_underfoot.mp3">
+        <img src="Images/LegionCommander/Legion_Commander_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <!-- Ikonky pro play/pause -->
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">I will crush you underfoot!</span>
+      </div>
+
+      <!-- Další hláška -->
+      <div class="voice-line" data-audio="Voices/LegionCommander/The_rush_of_battle.mp3">
+        <img src="Images/LegionCommander/Legion_Commander_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">Ah! The rush of battle!</span>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dota 2 Wiki</p>
+    <p class="validator-links">
+      <a href="https://validator.w3.org/nu/" target="_blank">Validate HTML</a> |
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validate CSS</a> |
+      <a href="https://achecks.org/achecker" target="_blank">WCAG Validation</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>

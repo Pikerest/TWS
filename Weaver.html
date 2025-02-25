@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weaver</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>DOTA 2 Wiki</h1>
+    <nav class="top-nav">
+      <!-- PATCHES -->
+      <div class="dropdown-patches">
+        <button>PATCHES</button>
+        <ul class="dropdown-content">
+          <li><a href="patch_7.38.html">Patch 7.38</a></li>
+        </ul>
+      </div>
+      <!-- HOME (odkaz rovnou) -->
+      <div class="home-link">
+        <a href="index.html">HOME</a>
+      </div>
+      <!-- HEROES -->
+      <div class="dropdown-heroes">
+        <button>HEROES</button>
+        <ul class="dropdown-content">
+          <li><a href="LegionCommander.html">Legion Commander</a></li>
+          <li><a href="Hoodwink.html">Hoodwink</a></li>
+          <li><a href="Weaver.html">Weaver</a></li>
+          <li><a href="Wisp.html">IO</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="page-links">
+      <a href="#facets">FACETS</a> |
+      <a href="#voiceLines">VOICE LINES</a>
+    </div>
+  </header>
+
+  <!-- Toggle pro light/dark v pravém rohu -->
+  <div class="theme-toggle-wrapper">
+    <label for="themeSwitch">Dark/Light:</label>
+    <input type="checkbox" id="themeSwitch">
+  </div>
+
+  <main class="hero-layout">
+
+    <!-- Horní řádek: vlevo popis, uprostřed video, vpravo schopnosti -->
+    <section class="hero-top">
+      <!-- Vlevo: popis -->
+      <div class="hero-description">
+        <div class="attr-name">
+          <p>AGILITY <img src="Images/Atributes/hero_agility.png"></p>
+        </div>
+        <br>
+        <h2><Label>WEAVER</Label></h2>
+        <br>
+        <p>
+            Weaver has no trouble evading enemies to position himself for another strike. Slipping in and out of sight, he avoids death by rewinding himself to an earlier position and health state. His arsenal of elusive skills ensures he is always a critical nuisance to his foes.
+        </p>
+        <br>
+        <h3>ATTACK TYPE</h3><br>
+        <p>RANGED</p> <img src="Images/Stats/icon_projectile_speed.png">
+        <br>
+      </div>
+
+      <!-- Uprostřed: showcase (video) vystředěný -->
+      <div class="hero-showcase">
+        <h3>Weaver</h3>
+        <br>
+        <video autoplay muted loop preload="auto" width="300">
+          <source src="Videos/weaver.webm" type="video/webm">
+        </video>
+      </div>
+
+      <!-- Vpravo: schopnosti ve sloupci s tooltipem -->
+      <div class="hero-abilities-extended">
+        <h3>ABILITIES</h3>
+        <div class="abilities-column">
+
+          <!-- Jedna schopnost (ikona s tooltipem, název vedle) -->
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/innate_icon.png" alt="Innate Ability">
+              <div class="tooltip-text">
+                <h4>Rewoven</h4>
+                <br>
+                <p>Every time Weaver casts an ability, he gains 50 attack range for 7s. This effect stacks independently.</p>
+              </div>
+            </div>
+            <span>Rewoven</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Weaver/The_Swarm_icon.webp" alt="Ability Q">
+              <div class="tooltip-text">
+                <h4>The Swarm</h4>
+                <br>
+                <p>Weaver launches a swarm of 12 young Weavers that latch on any enemy unit in their path, attacking and reducing armor until it is killed.</p>
+              </div>
+            </div>
+            <span>The Swarm</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Weaver/Shukuchi_icon.webp" alt="Ability W">
+              <div class="tooltip-text">
+                <h4>Shukuchi</h4>
+                <br>
+                <p>Weaver shifts out of visibility, gaining max movement speed --doing harm to any enemies it passes through.</p>
+              </div>
+            </div>
+            <span>Shukuchi</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Weaver/Geminate_Attack_icon.webp" alt="Ability E">
+              <div class="tooltip-text">
+                <h4>Geminate Attack</h4>
+                <br>
+                <p>Allows Weaver to dispatch two attacks at once.
+                </p>
+              </div>
+            </div>
+            <span>Geminate Attack</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Weaver/Time_Lapse_icon.webp" alt="Ultimate R">
+              <div class="tooltip-text">
+                <h4>Time Lapse</h4>
+                <br>
+                <p>Weaver warps backward to whatever position it was in five seconds earlier--regaining the HP and mana from that time. No effect on cooldown, gold or experience.</p>
+              </div>
+            </div>
+            <span>Time Lapse</span>
+          </div>
+
+        </div> <!-- .abilities-column -->
+      </div> <!-- .hero-abilities-extended -->
+    </section>
+
+    <!-- Druhý řádek: Atributy, Role, Statistiky -->
+    <section class="hero-info-row">
+      <!-- Atributy -->
+      <div class="hero-attributes">
+        <div class="portrait-section">
+          <img src="images/Weaver/Weaver_icon.webp" alt="Hero Portrait" class="hero-portrait">
+          <div class="hp-mana">
+            <div class="stat-line-hp">
+              <span>472</span>
+            </div>
+            <div class="stat-line-mana">
+              <span>315</span>
+            </div>
+          </div>
+        </div>
+        <div class="attributes-right">
+          <div class="attr">
+            <img src="Images/Atributes/hero_strength.png" alt="Strength" class="attr-icon">
+            <span class="attr-label">STR:</span>
+            <span class="attr-value">16 + 2.0</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_agility.png" alt="Agility" class="attr-icon">
+            <span class="attr-label">AGI:</span>
+            <span class="attr-value">17 + 3.3</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_intelligence.png" alt="Intelligence" class="attr-icon">
+            <span class="attr-label">INT:</span>
+            <span class="attr-value">20 + 2.0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role -->
+      <div class="hero-roles-extended">
+        <h4>ROLE</h4>
+        <div class="roles-grid">
+          <div class="role-item">
+            <span class="role-label">Carry</span>
+            <div class="role-bar"><span style="width: 75%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Support</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Nuker</span>
+            <div class="role-bar"><span style="width: 0"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Disabler</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Jungler</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Durable</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Escape</span>
+            <div class="role-bar"><span style="width: 100%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Pusher</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Initiator</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistiky -->
+      <div class="hero-stats">
+        <h4>Statistiky</h4>
+        <div class="stats-grid">
+          <div class="stat-line">
+            <img src="Images/Stats/icon_damage.png" alt="Damage" class="stat-icon">
+            <span>54 - 60</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_range.png" alt="Attack Range" class="stat-icon">
+            <span>425</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_movement_speed.png" alt="Movement Speed" class="stat-icon">
+            <span>275</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_armor.png" alt="Armor" class="stat-icon">
+            <span>3.8</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_time.png" alt="Attack Speed" class="stat-icon">
+            <span>1.8</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Třetí řádek: Facety -->
+    <section class="hero-facets-extended fade-up" id="facets">
+      <h3>FACET DETAILS</h3>
+      <div class="facet-box">
+        <div class="facet-box-Skitter">
+          <img src="Images/Weaver/speed.png">
+          <h4>SKITTERSTEP</h4>
+        </div>
+        <p>
+            Shukuchi movespeed increased and slows enemies when passing through them.</p>
+        <div class="facet-detail">
+          <img src="Images/Weaver/Shukuchi_icon.webp" alt="Scurry">
+          <strong>SHUKUCHI</strong>
+        </div>
+        <p>
+            Shukuchi movespeed increased and slows enemies when passing through them.
+        </p>
+        <p class="bonus-info">
+          MOVESPEED: 600<br>
+          SLOW DURATION: 0,2<br>
+          SLOW: 100%
+        </p>
+      </div>
+      <div class="facet-box">
+        <div class="facet-box-Hivemind">
+          <img src="Images/Weaver/xp.png">
+          <h4>HIVEMIND</h4>
+        </div>
+        <p>
+            Weaver gains experience when The Swarm beetles attack heroes.
+        </p>
+        <div class="facet-detail">
+          <img src="Images/Weaver/The_Swarm_icon.webp" alt="Sharpshooter">
+          <strong>THE SWARM</strong>
+        </div>
+        <P>Weaver gains experience when The Swarm beetles attack heroes.</P>
+        <p class="bonus-info">
+          XP PER ATTACK: 5 / 8 / 11 / 14
+        </p>
+      </div>
+    </section>
+
+    <!-- Hlášky hrdiny -->
+    <section class="hero-voice-lines" id="voiceLines">
+      <h3>WEAVER VOICELINES</h3>
+
+      <!-- Jedna hláška (Legion Commander) -->
+      <div class="voice-line" data-audio="Voices/Weaver/YouThought.mpeg">
+        <img src="Images/Weaver/Weaver_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <!-- Ikonky pro play/pause -->
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">You thought you had me didnt you ?</span>
+      </div>
+
+      <!-- Další hláška -->
+      <div class="voice-line" data-audio="/Voices/Weaver/WeaveABattle.mpeg">
+        <img src="Images/Weaver/Weaver_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">Lets weave a battle plan</span>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dota 2 Wiki</p>
+    <p class="validator-links">
+      <a href="https://validator.w3.org/nu/" target="_blank">Validate HTML</a> |
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validate CSS</a> |
+      <a href="https://achecks.org/achecker" target="_blank">WCAG Validation</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,1134 @@
+/* ====================================
+   RESET / BASE
+==================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #171c20; /* tmavé pozadí */
+  color: #fff;         /* bílý text */
+  position: relative;  /* pro umístění toggle */
+  font-size: 0.95rem;
+}
+
+/* Light mode override */
+body.light-mode {
+  background: #f1f1f1;
+  color: #171c20;
+}
+body.light-mode header,
+body.light-mode footer,
+body.light-mode .top-nav {
+  background: #ccc;
+  color: #000;
+}
+
+/* ====================================
+   HEADER & NAVIGATION
+==================================== */
+header {
+  background: #171c20;
+  padding: 1rem;
+  text-align: center;
+}
+header h1 {
+  font-family: Reaver, serif;
+  margin-bottom: 0.5rem;
+}
+
+/* Hlavní navigace */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  background: #171c20;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+.top-nav div {
+  position: relative;
+}
+
+/* Tlačítka v navigaci (PATCHES, HEROES) */
+.top-nav button {
+  background: #444;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-family: Reaver, serif;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.top-nav button:hover {
+  background: #555;
+}
+
+/* HOME jako přímý odkaz místo dropdownu */
+.home-link a {
+  background: #444;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.2rem;
+  text-transform: uppercase;
+  font-family: Reaver, serif;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+.home-link a:hover {
+  background: #555;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #171c20;
+  min-width: 120px;
+  z-index: 999;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.dropdown-content li a {
+  display: block;
+  padding: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+.dropdown-content li a:hover {
+  background: #666;
+}
+.top-nav div:hover .dropdown-content {
+  display: block;
+}
+
+/* =============================
+   PAGE-LINKS (kotvy)
+============================= */
+.page-links {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.page-links a {
+  color: #cf9b48; /* zlatavá */
+  font-family: Reaver, serif;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.2s;
+  letter-spacing: 0.5px;
+}
+.page-links a:hover {
+  color: #fff; /* světlejší při hoveru */
+  text-decoration: underline;
+}
+
+/* ====================================
+   THEME TOGGLE
+==================================== */
+.theme-toggle-wrapper {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  background: #171c20;
+  padding: 0.5rem;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+.theme-toggle-wrapper label {
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+/* ====================================
+   HOME LAYOUT (index.html)
+==================================== */
+.home-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Carousel */
+.carousel {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  padding: 1rem;
+  text-align: center;
+  height: 23rem;
+}
+.carousel-placeholder {
+  background: #444;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* ====================================
+   TI & HERO OF THE MONTH + TABLE (Index)
+==================================== */
+.ti-hero-month {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  background-image: url('Images/Background/radiant_dire5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 8rem;
+}
+
+/* TI video (levý horní) */
+.ti-video-container {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.ti-overlay {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+}
+.ti-overlay h2 {
+  font-family: Reaver, serif;
+  display: inline;
+  border: 4px solid #dd2a2a;
+  opacity: 75%;
+  border-radius: 8px;
+  padding: 5px;
+}
+.ti-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Tabulka (levý dolní) */
+.heroes-compare {
+  grid-area: 2 / 1 / 3 / 2;
+  margin: 1rem 0;
+  background: rgba(0,0,0,0.6);
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 6px;
+}
+.heroes-compare h2 {
+  font-family: Reaver, serif;
+  color: #cf9b48;
+  text-shadow: 1px 1px #000;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.heroes-compare table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.heroes-compare caption {
+  font-weight: bold;
+  color: #cf9b48;
+  margin: 0.5rem;
+  text-shadow: 1px 1px #000;
+}
+.heroes-compare thead th {
+  background: linear-gradient(to bottom, #3a3323, #2a2417);
+  color: #cf9b48;
+  font-weight: 600;
+  text-shadow: 1px 1px #000;
+  border: 1px solid #665c42;
+  padding: 0.5rem;
+}
+.heroes-compare th,
+.heroes-compare td {
+  border: 1px solid #665c42;
+  padding: 0.5rem;
+  text-align: center;
+  color: #fff;
+}
+.heroes-compare tbody tr:hover {
+  background: rgba(255,255,255,0.05);
+  transition: background 0.2s;
+}
+
+/* Hero of the Month (pravý sloupec přes 2 řádky) */
+.hero-of-month {
+  grid-area: 1 / 2 / 3 / 3;
+  border: 4px solid #444;
+  border-radius: 6px;
+  padding: 4rem;
+  text-align: center;
+}
+.hero-of-month video {
+  max-width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+}
+
+/* ====================================
+   CONTACT FORM (DotA-like styl)
+==================================== */
+.contact-form {
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid #665c42; /* zlatavý okraj */
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form h2 {
+  font-family: Reaver, serif; /* DotA-like font */
+  color: #cf9b48;             /* zlatavá barva */
+  text-shadow: 1px 1px #000;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.contact-form fieldset {
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.contact-form legend {
+  font-weight: bold;
+  color: #cf9b48; /* zlatavá barva */
+  text-shadow: 1px 1px #000;
+  padding: 0 0.5rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  display: inline-block;
+}
+
+.contact-form input[type="email"],
+.contact-form input[type="text"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;  /* volitelně omezit šířku */
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #fff;
+  padding: 0.4rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical; /* povolit měnit výšku textarey */
+}
+
+.contact-form button[type="submit"] {
+  background: #cf9b48; /* zlatavá barva */
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #000;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button[type="submit"]:hover {
+  background: #e0a752; /* světlejší zlatá při hoveru */
+}
+
+/* ====================================
+   PATCHNOTES LAYOUT
+==================================== */
+.patchnotes-layout {
+  display: block;
+  padding: 1rem;
+}
+
+/* Nadpis patchu */
+.patch-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.patch-title .patch-number {
+  color: #cf9b48;
+  font-family: Reaver, serif;
+  font-size: 1.5rem;
+}
+
+/* Obecné sekce (general-updates, item-updates, hero-updates) */
+.general-updates, .item-updates, .hero-updates {
+  background: rgba(0,0,0,0.3);
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* ====================================
+   GENERAL UPDATES (OL + UL STYLING)
+==================================== */
+.general-updates {
+  padding: 1.5rem 2rem;  /* větší odsazení */
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.general-updates h2 {
+  font-family: Reaver, serif;
+  color: #cf9b48;
+  text-shadow: 1px 1px #000;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Číslovaný seznam (hlavní body) */
+.general-updates ol {
+  list-style-type: decimal; /* 1,2,3,... */
+  margin-left: 1.5rem;      /* odsazení čísel od levého okraje */
+  padding-left: 0;          /* vynulovat default */
+  line-height: 1.4;         /* základní řádkování */
+}
+
+/* Hlavní body: větší text, zlatý, Reaver */
+.general-updates ol > li {
+  color: #cf9b48;           /* zlatavá barva */
+  font-family: Reaver, serif;
+  font-size: 1.2rem;        /* větší nadpis */
+  text-shadow: 1px 1px #000;
+  margin-bottom: 0.5rem;
+}
+
+/* Podseznam (ul) uvnitř li => menší text, bílý */
+.general-updates ol > li ul {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  list-style-type: disc;    /* odrážky */
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Mezera mezi subbody */
+.general-updates ol li ul li {
+  margin-bottom: 0.3rem;
+}
+
+/* ======================================
+   ITEM-CHANGE LAYOUT
+====================================== */
+.item-change {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.item-change .item-icon {
+  margin-top: 1.5rem;
+  width: 128px;
+  height: 64px;
+  object-fit: contain;
+  border: 1px solid #555;
+  border-radius: 4px;
+  object-fit: fill;
+}
+
+.item-change .item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-change h3 {
+  margin: 0 0 0.5rem 0;
+  font-family: Reaver, serif;
+  color: #cf9b48;
+  text-shadow: 1px 1px #000;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+.item-change .item-status {
+  margin: 0.3rem 0 0.5rem 0;
+  font-style: italic;
+  color: #ffcc00;
+}
+
+.item-change ul {
+  margin-left: 1.5rem;
+  line-height: 1.4;
+  list-style: disc;
+}
+
+/* ======================================
+   HERO-CHANGE LAYOUT (like item layout)
+====================================== */
+.hero-change {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-change .hero-icon {
+  width: 128px;
+  height: 64px;
+  object-fit: contain;
+  border: 1px solid #555;
+  border-radius: 4px;
+  object-fit: fill;
+}
+
+.hero-change .hero-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-change h3 {
+  margin: 0 0 0.5rem 0;
+  color: #cf9b48;
+  font-family: Reaver, serif;
+  text-shadow: 1px 1px #000;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+
+.hero-change .hero-status {
+  margin: 0.3rem 0 0.5rem 0;
+  font-style: italic;
+  color: #ffcc00;
+}
+
+.hero-change ul {
+  margin-left: 1.5rem;
+  line-height: 1.4;
+  list-style: disc;
+}
+
+/* ====================================
+   HERO LAYOUT (hero1.html)
+==================================== */
+.hero-layout {
+  background-color: #171c20;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Hero Top: description, showcase, abilities */
+.hero-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  min-height: 300px; 
+  background-image: url('Images/Background/greyfade.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 4rem;
+}
+.hero-description,
+.hero-showcase,
+.hero-abilities-extended {
+  padding: 1rem;
+}
+
+/* Showcase – vystředění video a nadpis */
+.hero-showcase {
+  font-family: Reaver, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  scale: 1.5;
+}
+
+/* ------------------------------------
+   Schopnosti (Abilities)
+------------------------------------ */
+.hero-abilities-extended h3 {
+  font-family: Reaver, serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.abilities-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ability-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.icon-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+.icon-wrapper img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.icon-wrapper:hover {
+  transform: scale(1.1);
+}
+.icon-wrapper:hover::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #ffcc00;
+  pointer-events: none;
+  border-radius: 6px;
+}
+.icon-wrapper .tooltip-text {
+  display: none;
+  position: absolute;
+  left: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.9);
+  color: #fff;
+  padding: 0.7rem;
+  border: 1px solid #444;
+  width: 280px;
+  z-index: 9999;
+}
+.icon-wrapper:hover .tooltip-text {
+  display: block;
+}
+
+/* ------------------------------------
+   Atributy: Portrét a atributy
+------------------------------------ */
+.hero-attributes {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  padding: 1rem;
+  color: #fff;
+}
+.portrait-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-portrait {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #555;
+  margin-bottom: 0.5rem;
+}
+.hp-mana {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.attributes-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.attr {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.attr-name {
+  display: flex;
+  justify-content: left;
+  width: 20rem;
+  gap: 3rem;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+}
+.attr-name img {
+  width: 30px;
+  height: 30px;
+}
+.attr-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.attr-label {
+  font-weight: bold;
+}
+
+/* ------------------------------------
+   HERO INFO ROW: Atributy, Role, Statistiky
+------------------------------------ */
+.hero-info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  background: linear-gradient(80deg, #252728 0%, #101415 100%);
+}
+
+/* Role */
+.hero-roles-extended {
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+.hero-roles-extended h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.roles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.8rem;
+}
+.role-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #333;
+  padding: 0.5rem;
+  border: 1px solid #171c20;
+}
+.role-label {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+.role-bar {
+  background-color: #171c20;
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  position: relative;
+}
+.role-bar span {
+  display: block;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 3px;
+  width: 0; /* inline style v HTML */
+}
+
+/* Statistiky */
+.hero-stats {
+  padding: 1rem;
+}
+.hero-stats h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.hero-stats .stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+.stat-line, .stat-line-hp, .stat-line-mana {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.stat-line-hp {
+  background-color: rgb(102, 240, 74);
+  width: 180px;
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+.stat-line-mana {
+  background-color: rgb(72, 190, 226);
+  width: 180px;
+  padding: 5px 40px;
+  border-radius: 10px;
+}
+.stat-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* ------------------------------------
+   FACETY
+------------------------------------ */
+.hero-facets-extended {
+  background: linear-gradient(80deg, #151616 0%, #040505 100%);
+  min-height: 221px;
+  border-top: 2px solid #282828;
+  border-bottom: 2px solid #2c2e2e;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  width: 100%;
+  height: fit-content;
+  box-shadow: 0px 0px 8px #000;
+  justify-content: center;
+  z-index: 2;
+  padding-bottom: 100px;
+}
+.hero-facets-extended h3 {
+  grid-column: 1 / 3;
+  width: 100%;
+  text-align: center;
+  font-family: Reaver, serif;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 5rem;
+  margin-bottom: 30px;
+}
+.facet-box {
+  background: #181f24;
+  border: 1px solid #2b2f33;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-bottom: 16px;
+  background-size: cover;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  height: 35rem;
+}
+.facet-box p {
+  color: #9ab0cd;
+  padding-top: 16px;
+  margin: 0 16px;
+  font-size: 20px;
+}
+.facet-box-StonehallPlate {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(198,161,88), rgb(96,73,40));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-StonehallPlate img {
+  height: 75%;
+}
+.facet-box-SpoilsOfWar {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(159,60,60), rgb(74,32,64));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-SpoilsOfWar img {
+  height: 75%;
+}
+
+.facet-box-GoNuts {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(158, 122, 49), rgb(96,73,40));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-GoNuts img {
+  height: 50%;
+}
+.facet-box-Hipshot {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(95, 161, 7), rgb(96,73,40));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-Hipshot img {
+  height: 50%;
+}
+
+.facet-box-Kritzkrieg {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(66, 198, 238), rgb(96,73,40));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-Kritzkrieg img {
+  height: 50%;
+}
+.facet-box-Medigun {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(141, 145, 145), rgb(46, 45, 43));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-Medigun img {
+  height: 50%;
+}
+
+.facet-box-Skitter {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(141, 26, 116), rgb(96,73,40));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-Skitter img {
+  height: 50%;
+}
+
+.facet-box-Hivemind {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: x-large;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(139, 193, 255), rgb(25, 55, 189));
+  background-size: cover;
+  margin-top: 1rem;
+}
+.facet-box-Hivemind img {
+  height: 50%;
+}
+
+.facet-box h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.facet-detail {
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, rgba(155,205,255,0.09) 0%, rgba(155,205,255,0.035) 30%, rgba(208,232,255,0) 100%);
+  gap: 1.5rem;
+  height: 5rem;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+.facet-detail img {
+  height: 100%;
+  object-fit: contain;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+.bonus-info {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-top: 0.5rem;
+}
+
+/* ====================================
+   HLÁŠKY HRDINY (Voice Lines)
+==================================== */
+.hero-voice-lines {
+  background: #2a2a2a;
+  border: 1px solid #444;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.hero-voice-lines h3 {
+  font-family: Reaver, serif;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.voice-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.hero-head-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+.voice-button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+.voice-text {
+  font-style: italic;
+}
+
+/* ====================================
+   ANIMACE: fadeUp zespodu
+==================================== */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up {
+  opacity: 0;
+  animation: fadeUp 1.8s ease-out forwards;
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+footer {
+  background: #171c20;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+footer .validator-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+footer .validator-links a:hover {
+  text-decoration: underline;
+  color: #ffcc00;
+}
+footer .validator-links a:visited {
+  color: #cf9b48;
+}
+footer .validator-links a:active {
+  color: #ff4444;
+}
+footer .validator-links a:focus {
+  outline: 2px dashed #ffcc00;
+  outline-offset: 2px;
+}
+
+/* ====================================
+   RESPONSIVITY
+==================================== */
+@media (max-width: 768px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .ti-hero-month {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+  .ti-video-container {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .heroes-compare {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .hero-of-month {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .tooltip .tooltip-text {
+    left: 50%;
+    transform: translate(-50%, -110%);
+    width: 80vw;
+    white-space: normal;
+  }
+  .hero-top {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    background-image: none;
+  }
+  .hero-showcase {
+    scale: 1;
+    margin: 0 auto;
+  }
+  .hero-description, 
+  .hero-showcase,
+  .hero-abilities-extended {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .hero-info-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .hero-facets-extended {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+    display: inline;
+  }
+  .facet-box {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .hero-voice-lines {
+    padding: 1rem;
+  }
+  .heroes-compare table {
+    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+  }
+}

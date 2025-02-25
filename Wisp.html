@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IO</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>DOTA 2 Wiki</h1>
+    <nav class="top-nav">
+      <!-- PATCHES -->
+      <div class="dropdown-patches">
+        <button>PATCHES</button>
+        <ul class="dropdown-content">
+          <li><a href="patch_7.38.html">Patch 7.38</a></li>
+        </ul>
+      </div>
+      <!-- HOME (odkaz rovnou) -->
+      <div class="home-link">
+        <a href="index.html">HOME</a>
+      </div>
+      <!-- HEROES -->
+      <div class="dropdown-heroes">
+        <button>HEROES</button>
+        <ul class="dropdown-content">
+          <li><a href="LegionCommander.html">Legion Commander</a></li>
+          <li><a href="Hoodwink.html">Hoodwink</a></li>
+          <li><a href="Weaver.html">Weaver</a></li>
+          <li><a href="Wisp.html">IO</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="page-links">
+      <a href="#facets">FACETS</a> |
+      <a href="#voiceLines">VOICE LINES</a>
+    </div>
+  </header>
+
+  <!-- Toggle pro light/dark v pravém rohu -->
+  <div class="theme-toggle-wrapper">
+    <label for="themeSwitch">Dark/Light:</label>
+    <input type="checkbox" id="themeSwitch">
+  </div>
+
+  <main class="hero-layout">
+
+    <!-- Horní řádek: vlevo popis, uprostřed video, vpravo schopnosti -->
+    <section class="hero-top">
+      <!-- Vlevo: popis -->
+      <div class="hero-description">
+        <div class="attr-name">
+          <p>UNIVERSAL <img src="Images/Atributes/hero_universal.png"></p>
+        </div>
+        <br>
+        <h2><Label>IO</Label></h2>
+        <br>
+        <p>
+            Io has a talent for making allies more effective. A powerful companion, the wisp's tether speeds allies and stops enemies. Capable of linking to and teleporting across the battlefield with an ally, Io can make a dangerous ally even deadlier.
+        </p>
+        <br>
+        <h3>ATTACK TYPE</h3><br>
+        <p>RANGED</p> <img src="Images/Stats/icon_projectile_speed.png">
+        <br>
+      </div>
+
+      <!-- Uprostřed: showcase (video) vystředěný -->
+      <div class="hero-showcase">
+        <h3>IO</h3>
+        <br>
+        <video autoplay muted loop preload="auto" width="300">
+          <source src="Videos/wisp.webm" type="video/webm">
+        </video>
+      </div>
+
+      <!-- Vpravo: schopnosti ve sloupci s tooltipem -->
+      <div class="hero-abilities-extended">
+        <h3>ABILITIES</h3>
+        <div class="abilities-column">
+
+          <!-- Jedna schopnost (ikona s tooltipem, název vedle) -->
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/innate_icon.png" alt="Innate Ability">
+              <div class="tooltip-text">
+                <h4>Sight Seer</h4>
+                <br>
+                <p>Io's Team takes 1s less to take watchers, and their watchers have 300 bonus vision.</p>
+              </div>
+            </div>
+            <span>Sight Seer</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Wisp/Tether_icon.webp" alt="Ability Q">
+              <div class="tooltip-text">
+                <h4>Tether</h4>
+                <br>
+                <p>Tethers Io to an allied unit, granting bonus movement speed to both. When Io restores health or mana, the tethered unit gains a portion of that amount. The tether breaks when the allied unit moves too far away, or Io cancels the tether. Tether slows enemies touching it.</p>
+              </div>
+            </div>
+            <span>Tether</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Wisp/Spirits_icon.webp" alt="Ability W">
+              <div class="tooltip-text">
+                <h4>Spirits</h4>
+                <br>
+                <p>Summon five particle spirits that dance in a circle around Io. If a particle collides with an enemy hero, it explodes, damaging all enemy units in an area around it.  Creeps take minor damage from touching a particle spirit, but do not cause them to explode.  When its duration ends, any remaining Spirits explode.
+                </p>
+              </div>
+            </div>
+            <span>Spirits</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Wisp/Spirits_icon.webp" alt="Ability E">
+              <div class="tooltip-text">
+                <h4>Overcharge</h4>
+                <br>
+                <p>Io gains health regeneration based on max health.  If Io is Tethered to an ally, that unit also gains any bonuses granted by Overcharge.
+                </p>
+              </div>
+            </div>
+            <span>Overcharge</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Wisp/Relocate_icon.webp" alt="Ultimate R">
+              <div class="tooltip-text">
+                <h4>Relocate</h4>
+                <br>
+                <p>Teleports Io and a tethered ally to any location. After the spell expires, Io and the tethered ally will return to their original location. Double-click to teleport to your team's base fountain.
+                </p>
+              </div>
+            </div>
+            <span>Relocate</span>
+          </div>
+
+        </div> <!-- .abilities-column -->
+      </div> <!-- .hero-abilities-extended -->
+    </section>
+
+    <!-- Druhý řádek: Atributy, Role, Statistiky -->
+    <section class="hero-info-row">
+      <!-- Atributy -->
+      <div class="hero-attributes">
+        <div class="portrait-section">
+          <img src="images/Wisp/Io_icon.webp" alt="Hero Portrait" class="hero-portrait">
+          <div class="hp-mana">
+            <div class="stat-line-hp">
+              <span>494</span>
+            </div>
+            <div class="stat-line-mana">
+              <span>351</span>
+            </div>
+          </div>
+        </div>
+        <div class="attributes-right">
+          <div class="attr">
+            <img src="Images/Atributes/hero_strength.png" alt="Strength" class="attr-icon">
+            <span class="attr-label">STR:</span>
+            <span class="attr-value">17 + 3.0</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_agility.png" alt="Agility" class="attr-icon">
+            <span class="attr-label">AGI:</span>
+            <span class="attr-value">14 + 1.6</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_intelligence.png" alt="Intelligence" class="attr-icon">
+            <span class="attr-label">INT:</span>
+            <span class="attr-value">23 + 1.7</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role -->
+      <div class="hero-roles-extended">
+        <h4>ROLE</h4>
+        <div class="roles-grid">
+          <div class="role-item">
+            <span class="role-label">Carry</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Support</span>
+            <div class="role-bar"><span style="width: 100%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Nuker</span>
+            <div class="role-bar"><span style="width: 25"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Disabler</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Jungler</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Durable</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Escape</span>
+            <div class="role-bar"><span style="width: 65%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Pusher</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Initiator</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistiky -->
+      <div class="hero-stats">
+        <h4>Statistiky</h4>
+        <div class="stats-grid">
+          <div class="stat-line">
+            <img src="Images/Stats/icon_damage.png" alt="Damage" class="stat-icon">
+            <span>58 - 64</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_range.png" alt="Attack Range" class="stat-icon">
+            <span>1200</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_movement_speed.png" alt="Movement Speed" class="stat-icon">
+            <span>320</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_armor.png" alt="Armor" class="stat-icon">
+            <span>3.3</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_time.png" alt="Attack Speed" class="stat-icon">
+            <span>1.7</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Třetí řádek: Facety -->
+    <section class="hero-facets-extended fade-up" id="facets">
+      <h3>FACET DETAILS</h3>
+      <div class="facet-box">
+        <div class="facet-box-Kritzkrieg">
+          <img src="Images/Wisp/damage.png">
+          <h4>KRITZKRIEG</h4>
+        </div>
+        <p>
+            Overcharge grants attack speed and spell amplification to Io and any Tethered allies.
+        </p>
+        <div class="facet-detail">
+          <img src="Images/Wisp/Overcharge_icon.webp" alt="Scurry">
+          <strong>OVERCHARGE</strong>
+        </div>
+        <p>
+            Overcharge grants attack speed and spell amplification to Io and any Tethered allies.
+        </p>
+        <p class="bonus-info">
+          BONUS ATTACK SPEED: 35 / 60 / 85 / 110<br>
+          SPELL AMPLIFICATION: 8% / 10% / 12% / 14% 
+        </p>
+      </div>
+      <div class="facet-box">
+        <div class="facet-box-Medigun">
+          <img src="Images/Wisp/armor.png">
+          <h4>MEDIGUN</h4>
+        </div>
+        <p>
+            Overcharge grants armor and magic resistance to Io and any Tethered allies.
+        </p>
+        <div class="facet-detail">
+          <img src="Images/Wisp/Overcharge_icon.webp" alt="Sharpshooter">
+          <strong>OVERCHARGE</strong>
+        </div>
+        <P>Overcharge grants armor and magic resistance to Io and any Tethered allies.</P>
+        <p class="bonus-info">
+          BONUS ARMOR: 4 / 7 / 10 / 13 <br>
+          BONUS MAGIC RESISTANCE: 12% / 18% / 24% / 30%
+        </p>
+      </div>
+    </section>
+
+    <!-- Hlášky hrdiny -->
+    <section class="hero-voice-lines" id="voiceLines">
+      <h3>IO VOICELINES</h3>
+
+      <!-- Jedna hláška (Legion Commander) -->
+      <div class="voice-line" data-audio="Voices/Wisp/ioLaugh.mpeg">
+        <img src="Images/Wisp/Io_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <!-- Ikonky pro play/pause -->
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">IO Laughs</span>
+      </div>
+
+      <!-- Další hláška -->
+      <div class="voice-line" data-audio="/Voices/Wisp/ioAlly.mpeg">
+        <img src="Images/Wisp/Io_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">IO meets friendly unit</span>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dota 2 Wiki</p>
+    <p class="validator-links">
+      <a href="https://validator.w3.org/nu/" target="_blank">Validate HTML</a> |
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validate CSS</a> |
+      <a href="https://achecks.org/achecker" target="_blank">WCAG Validation</a>
+    </p>
+  </footer>
+</body>
+
+</html>

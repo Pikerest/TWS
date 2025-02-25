@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoodwink</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>DOTA 2 Wiki</h1>
+    <nav class="top-nav">
+      <!-- PATCHES -->
+      <div class="dropdown-patches">
+        <button>PATCHES</button>
+        <ul class="dropdown-content">
+          <li><a href="patch_7.38.html">Patch 7.38</a></li>
+        </ul>
+      </div>
+      <!-- HOME (odkaz rovnou) -->
+      <div class="home-link">
+        <a href="index.html">HOME</a>
+      </div>
+      <!-- HEROES -->
+      <div class="dropdown-heroes">
+        <button>HEROES</button>
+        <ul class="dropdown-content">
+          <li><a href="LegionCommander.html">Legion Commander</a></li>
+          <li><a href="Hoodwink.html">Hoodwink</a></li>
+          <li><a href="Weaver.html">Weaver</a></li>
+          <li><a href="Wisp.html">IO</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <div class="page-links">
+      <a href="#facets">FACETS</a> |
+      <a href="#voiceLines">VOICE LINES</a>
+    </div>
+  </header>
+
+  <!-- Toggle pro light/dark v pravém rohu -->
+  <div class="theme-toggle-wrapper">
+    <label for="themeSwitch">Dark/Light:</label>
+    <input type="checkbox" id="themeSwitch">
+  </div>
+
+  <main class="hero-layout">
+
+    <!-- Horní řádek: vlevo popis, uprostřed video, vpravo schopnosti -->
+    <section class="hero-top">
+      <!-- Vlevo: popis -->
+      <div class="hero-description">
+        <div class="attr-name">
+          <p>AGILITY <img src="Images/Atributes/hero_agility.png"></p>
+        </div>
+        <br>
+        <h2><Label>HOODWINK</Label></h2>
+        <br>
+        <p>
+          Always at hand when trouble's afoot, Hoodwink lives to tangle with the threats that fill the haunted forest she adopted as her home. Toting a massive crossbow while still able to scurry through the woodland with the greatest of ease, Hoodwink is nearly impossible to keep tabs on in battle. Lose track and she'll pop out behind you -- your stunned carcass already dangling in one of her nets.
+        </p>
+        <br>
+        <h3>ATTACK TYPE</h3><br>
+        <p>RANGED</p> <img src="Images/Stats/icon_projectile_speed.png">
+        <br>
+      </div>
+
+      <!-- Uprostřed: showcase (video) vystředěný -->
+      <div class="hero-showcase">
+        <h3>HOODWINK</h3>
+        <br>
+        <video autoplay muted loop preload="auto" width="300">
+          <source src="Videos/hoodwink.webm" type="video/webm">
+        </video>
+      </div>
+
+      <!-- Vpravo: schopnosti ve sloupci s tooltipem -->
+      <div class="hero-abilities-extended">
+        <h3>ABILITIES</h3>
+        <div class="abilities-column">
+
+          <!-- Jedna schopnost (ikona s tooltipem, název vedle) -->
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/LegionCommander/innate_icon.png" alt="Innate Ability">
+              <div class="tooltip-text">
+                <h4>Mistwoods Wayfarer</h4>
+                <br>
+                <p>Hoodwink has a chance to redirect enemy attacks to a nearby tree.</p>
+              </div>
+            </div>
+            <span>Mistwoods Wayfarer</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Hoodwink/Acorn_Shot_icon.webp" alt="Ability Q">
+              <div class="tooltip-text">
+                <h4>Acorn Shot</h4>
+                <br>
+                <p>Fires Hoodwink's attack with an acorn at the target unit.  The acorn bounces to nearby targets, slowing them and dealing a percentage of Hoodwink's attack with bonus damage.
+                  If point targeted, a tree is created at the target position and the acorn will bounce to nearby targets.  The ability may be placed on alt-cast to force this behavior.</p>
+              </div>
+            </div>
+            <span>Acorn Shot</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Hoodwink/Bushwhack_icon.webp" alt="Ability W">
+              <div class="tooltip-text">
+                <h4>Bushwhack</h4>
+                <br>
+                <p>Tosses a net trap that stuns enemies if they are near a tree in the area.  Affected enemies take damage over time and are pulled towards the tree nearest to them within the target area, and have their vision reduced to 0 for the duration of the stun.</p>
+              </div>
+            </div>
+            <span>Bushwhack</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Hoodwink/Scurry_icon.webp" alt="Ability E">
+              <div class="tooltip-text">
+                <h4>Scurry</h4>
+                <br>
+                <p>Hoodwink gains bonus movement speed, phased movement, and tree-walking for a brief time. All sources of evasion are doubled for the duration.</p>
+              </div>
+            </div>
+            <span>Scurry</span>
+          </div>
+
+          <div class="ability-item">
+            <div class="icon-wrapper tooltip">
+              <img src="Images/Hoodwink/Sharpshooter_icon.webp" alt="Ultimate R">
+              <div class="tooltip-text">
+                <h4>Sharpshooter</h4>
+                <br>
+                <p>Hoodwink charges up and fires a deadly bolt from her crossbow, dealing heavy damage, break and slow to an enemy Hero.  The damage and debuff duration scale up to max after 3 seconds, and the bolt is fired automatically after 5 seconds.
+                  Hoodwink is knocked backwards for a distance of 350 from the force of the shot. Creeps hit by the bolt are damaged for half the values</p>
+              </div>
+            </div>
+            <span>Sharpshooter</span>
+          </div>
+
+        </div> <!-- .abilities-column -->
+      </div> <!-- .hero-abilities-extended -->
+    </section>
+
+    <!-- Druhý řádek: Atributy, Role, Statistiky -->
+    <section class="hero-info-row">
+      <!-- Atributy -->
+      <div class="hero-attributes">
+        <div class="portrait-section">
+          <img src="images/Hoodwink/Hoodwink_icon.webp" alt="Hero Portrait" class="hero-portrait">
+          <div class="hp-mana">
+            <div class="stat-line-hp">
+              <span>494</span>
+            </div>
+            <div class="stat-line-mana">
+              <span>327</span>
+            </div>
+          </div>
+        </div>
+        <div class="attributes-right">
+          <div class="attr">
+            <img src="Images/Atributes/hero_strength.png" alt="Strength" class="attr-icon">
+            <span class="attr-label">STR:</span>
+            <span class="attr-value">17 + 2.0</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_agility.png" alt="Agility" class="attr-icon">
+            <span class="attr-label">AGI:</span>
+            <span class="attr-value">25 + 3.6</span>
+          </div>
+          <div class="attr">
+            <img src="Images/Atributes/hero_intelligence.png" alt="Intelligence" class="attr-icon">
+            <span class="attr-label">INT:</span>
+            <span class="attr-value">21 + 2.9</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Role -->
+      <div class="hero-roles-extended">
+        <h4>ROLE</h4>
+        <div class="roles-grid">
+          <div class="role-item">
+            <span class="role-label">Carry</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Support</span>
+            <div class="role-bar"><span style="width: 75%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Nuker</span>
+            <div class="role-bar"><span style="width: 75%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Disabler</span>
+            <div class="role-bar"><span style="width: 30%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Jungler</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Durable</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Escape</span>
+            <div class="role-bar"><span style="width: 65%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Pusher</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+          <div class="role-item">
+            <span class="role-label">Initiator</span>
+            <div class="role-bar"><span style="width: 0%"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistiky -->
+      <div class="hero-stats">
+        <h4>Statistiky</h4>
+        <div class="stats-grid">
+          <div class="stat-line">
+            <img src="Images/Stats/icon_damage.png" alt="Damage" class="stat-icon">
+            <span>47 - 54</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_range.png" alt="Attack Range" class="stat-icon">
+            <span>575</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_movement_speed.png" alt="Movement Speed" class="stat-icon">
+            <span>310</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_armor.png" alt="Armor" class="stat-icon">
+            <span>4.2</span>
+          </div>
+          <div class="stat-line">
+            <img src="Images/Stats/icon_attack_time.png" alt="Attack Speed" class="stat-icon">
+            <span>2.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Třetí řádek: Facety -->
+    <section class="hero-facets-extended fade-up" id="facets">
+      <h3>FACET DETAILS</h3>
+      <div class="facet-box">
+        <div class="facet-box-GoNuts">
+          <img src="Images/Hoodwink/range.png">
+          <h4>GO NUTS</h4>
+        </div>
+        <p>
+          Scurry also provides bonus attack and cast range.
+        </p>
+        <div class="facet-detail">
+          <img src="Images/Hoodwink/Scurry_icon.webp" alt="Scurry">
+          <strong>SCURRY</strong>
+        </div>
+        <p>
+          Scurry also provides bonus attack and cast range.
+        </p>
+        <p class="bonus-info">
+          BUFF DURATION: 1.5<br>
+          ACTIVE CAST RANGE: 75 / 150 / 225 / 300<br>
+          ACTIVE ATTACK RANGE:75 / 150 / 225 / 300
+        </p>
+      </div>
+      <div class="facet-box">
+        <div class="facet-box-Hipshot">
+          <img src="Images/Hoodwink/cooldown.png">
+          <h4>HIPSHOT</h4>
+        </div>
+        <p>
+          Sharpshooter has a greatly reduced cooldown. Damage, debuff duration, turn time, and wind-up times are also reduced.
+        </p>
+        <div class="facet-detail">
+          <img src="Images/Hoodwink/Sharpshooter_icon.webp" alt="Sharpshooter">
+          <strong>Sharpshooter</strong>
+        </div>
+        <p class="bonus-info">
+          ASSIST BONUS DAMAGE: 5 / 10 / 15 <br>
+        </p>
+      </div>
+    </section>
+
+    <!-- Hlášky hrdiny -->
+    <section class="hero-voice-lines" id="voiceLines">
+      <h3>LEGION COMMANDER VOICELINES</h3>
+
+      <!-- Jedna hláška (Legion Commander) -->
+      <div class="voice-line" data-audio="Voices/Hoodwink/StubbiesDidWe.mpeg">
+        <img src="Images/Hoodwink/Hoodwink_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <!-- Ikonky pro play/pause -->
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">Caught ya in your stubbies did we ?</span>
+      </div>
+
+      <!-- Další hláška -->
+      <div class="voice-line" data-audio="Voices/Hoodwink/Worry.mpeg">
+        <img src="Images/Hoodwink/Hoodwink_minimap_icon.webp" alt="Hero Head" class="hero-head-icon">
+        <button class="voice-button">
+          <span class="play-icon">&#9658;</span>
+          <span class="pause-icon" style="display:none;">&#10073;&#10073;</span>
+        </button>
+        <span class="voice-text">No worries really only applies to me. That bunch should have heaps of worry.</span>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Dota 2 Wiki</p>
+    <p class="validator-links">
+      <a href="https://validator.w3.org/nu/" target="_blank">Validate HTML</a> |
+      <a href="https://jigsaw.w3.org/css-validator/" target="_blank">Validate CSS</a> |
+      <a href="https://achecks.org/achecker" target="_blank">WCAG Validation</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
