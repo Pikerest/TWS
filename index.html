@@ -53,31 +53,33 @@
     <section class="carousel">
       <h2>“A Modern Multiplayer Masterpiece.”</h2>
       <div class="swiffy-slider slider-nav-autoplay" data-slider-nav-autoplay-interval="2500">
-        <ul class="slider-container" >
+        <ul class="slider-container">
           <li><img src="Images/Dota1.jpg" alt="Dota1"></li>
           <li><img src="Images/Dota2.jpg" alt="Dota2"></li>
           <li><img src="Images/Background/559503.jpg" alt="Background559503"></li>
           <li><img src="Images/Background/585068.jpg" alt="Background585068"></li>
           <li><img src="Images/Background/488286.jpg" alt="Background488286"></li>
           <li><img src="Images/Background/387247041.jpg" alt="Background387247041"></li>
-          <li><img src="Images/Background/dota2hq.eu-weaver-desktop-wallpaper-the-dusk-crawler-3500-1920x1080.jpg" alt="eu-weaver-desktop-wallpaper-the-dusk-crawler-3500-1920x1080"></li>
-          <li><img src="Images/Background/dotawallpapers.com-legion-commander-arcana-wallpaper-for-desktop-4471-1968x1536.jpg" alt="com-legion-commander-arcana-wallpaper-for-desktop-4471-1968x1536"></li>
-          <li><img src="Images/Background/dotawallpapers.com-dota-2-hoodwink-4145-1920x1085.jpg" alt="com-dota-2-hoodwink-4145-1920x1085"></li>
+          <li><img src="Images/Background/dota2hq.eu-weaver-desktop-wallpaper-the-dusk-crawler-3500-1920x1080.jpg" alt="Weaver wallpaper"></li>
+          <li><img src="Images/Background/dotawallpapers.com-legion-commander-arcana-wallpaper-for-desktop-4471-1968x1536.jpg" alt="Legion Commander wallpaper"></li>
+          <li><img src="Images/Background/dotawallpapers.com-dota-2-hoodwink-4145-1920x1085.jpg" alt="Hoodwink wallpaper"></li>
           <li><img src="Images/Background/614585827.jpg" alt="Background614585827"></li>
-          <li><img src="Images/Background/dotawallpapers.com-dota-wallpaper-4330-2560x1440.gif" alt="com-dota-wallpaper-4330-2560x1440"></li>
+          <li><img src="Images/Background/dotawallpapers.com-dota-wallpaper-4330-2560x1440.gif" alt="Dota 2 wallpaper gif"></li>
           <li><img src="Images/Background/519205575.jpg" alt="Background519205575"></li>
         </ul>
-
-        <button type="button" class="slider-nav"></button>
-        <button type="button" class="slider-nav slider-nav-next"></button>
-
+    
+        <!-- Doplň aria-label k navigačním tlačítkům -->
+        <button type="button" class="slider-nav" aria-label="Předchozí slide"></button>
+        <button type="button" class="slider-nav slider-nav-next" aria-label="Další slide"></button>
+    
+        <!-- Stejně tak i k indikátorům, aby byly čtečce srozumitelné -->
         <div class="slider-indicators">
-          <button class="active"></button>
-          <button></button>
-          <button></button>
+          <button class="active" aria-label="Slide 1"></button>
+          <button aria-label="Slide 2"></button>
+          <button aria-label="Slide 3"></button>
         </div>
       </div>
-    </section>
+    </section>    
 
     <!-- Sekce: 2-1 layout (levá strana 2 řádky: TI nahoře, Tabulka dole; pravá strana 1 sloupec: Hero of Month) -->
     <section class="ti-hero-month" id="tiSection">
