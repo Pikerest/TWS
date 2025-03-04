@@ -1,5 +1,6 @@
 .swiffy-slider {
     position: relative;
+    justify-content: center;
     display: block;
     width: 100%;
     height: 100%;
@@ -8,7 +9,7 @@
     --swiffy-slider-item-gap: 1rem;
     --swiffy-slider-item-reveal: 0rem;
     --swiffy-slider-item-ratio: 2/1;
-    --swiffy-slider-item-count: 1;
+    --swiffy-slider-item-count: 3;
     --swiffy-slider-nav-light: #fff;
     --swiffy-slider-nav-dark: #333;
     --swiffy-slider-nav-zoom: 1;
@@ -54,6 +55,7 @@
     display: grid;
     align-items: center;
     height: 100%;
+    width:100%; 
     grid: auto / auto-flow max-content;
     grid-auto-rows: 100%;
     grid-auto-columns: var(--swiffy-slider-item-width);
@@ -67,14 +69,26 @@
     background-clip: padding-box;
     background-repeat: no-repeat;
 }
-
+.slider-container li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.slider-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 .slider-container>* {
     /*The slides*/
     scroll-snap-align: var(--swiffy-slider-snap-align);
     position: relative; 
     width: 100%;
-    height: 100%;
+    height: 100%;   
 }
+
 
 .slider-item-helper .slider-container>* {
     background-size: cover;

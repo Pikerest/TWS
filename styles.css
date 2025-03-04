@@ -160,16 +160,21 @@ header h1 {
 
 /* Carousel */
 .carousel {
-  background: #2a2a2a;
-  border: 1px solid #444;
+  background: none;
   padding: 1rem;
   text-align: center;
+  
+  /* Pevná výška karuselu */
   height: 23rem;
+  
+  /* Skryjeme jakýkoli svislý přesah obrázku */
+  overflow: hidden;
 }
-.carousel-placeholder {
-  background: #444;
-  color: #fff;
-  padding: 2rem;
+
+.carousel h2 {
+  font-family: Reaver, serif;
+  color: #cf9b48;
+  margin: 0 0 1rem 0; /* ať se nesráží s obrázky */
 }
 
 /* ====================================
@@ -568,7 +573,7 @@ header h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  scale: 1.5;
+  transform: scale(1.5);
 }
 
 /* ------------------------------------
@@ -1099,7 +1104,7 @@ footer .validator-links a:focus {
     background-image: none;
   }
   .hero-showcase {
-    scale: 1;
+    transform: scale(1);
     margin: 0 auto;
   }
   .hero-description, 
