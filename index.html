@@ -81,9 +81,8 @@
       </div>
     </section>    
 
-    <!-- Sekce: 2-1 layout (levá strana 2 řádky: TI nahoře, Tabulka dole; pravá strana 1 sloupec: Hero of Month) -->
     <section class="ti-hero-month" id="tiSection">
-      <!-- TI video (levý horní) -->
+      <!-- TI video -->
       <div class="ti-video-container">
         <video class="bg-video" autoplay muted loop playsinline preload="auto" controls>
           <source src="Videos/dota_montage.mp4" type="video/mp4">
@@ -92,11 +91,15 @@
         </video>
         <div class="ti-overlay">
           <h2>The International 2025</h2><br><br><br>
-          <a href="https://www.dota2.com/esports/ti2025" target="_blank" class="ti-link"></a>
+          <a href="https://www.dota2.com/esports/ti2025" 
+              target="_blank" 
+              class="ti-link" 
+              aria-label="Oficiální stránka The International 2025">
+          </a>
         </div>
       </div>
 
-      <!-- Tabulka (levý dolní) -->
+      <!-- Tabulka -->
       <section class="heroes-compare fade-up" id="compareHeroes">
         <h2>BUFFS OF THE PATCH</h2>
         <table>
@@ -151,7 +154,7 @@
         </table>
       </section>
 
-      <!-- Hero of the Month (pravý sloupec) -->
+      <!-- Hero of the Month -->
       <div class="hero-of-month" id="heroMonth">
         <h2>HERO OF THE MONTH</h2>
         <a href="LegionCommander.html" aria-label="Více o Legion Commander">
@@ -164,7 +167,7 @@
       </div>
     </section>
 
-    <!-- Vylepšený formulář -->
+    <!-- Formulář -->
     <section class="contact-form fade-up">
       <h2>Návrhy a připomínky</h2>
       <form action="#" method="post">
@@ -176,7 +179,7 @@
           <input type="email" id="email" name="email" required placeholder="Vaše emailová adresa">
           <br><br>
 
-          <!-- Rank (dropdown) -->
+          <!-- Rank -->
           <label for="rank">Rank:</label><br>
           <select id="rank" name="rank" required>
             <option value="" disabled selected>-- Vyberte rank --</option>
@@ -191,7 +194,7 @@
           </select>
           <br><br>
 
-          <!-- Přezdívka -->
+          <!-- Nick -->
           <label for="nickname">Přezdívka:</label><br>
           <input type="text" id="nickname" name="nickname" pattern="[A-Za-z0-9_]{3,15}"
             placeholder="3-15 znaků, bez diakritiky">
@@ -202,7 +205,7 @@
           <textarea id="feedback" name="feedback" rows="4" cols="40" placeholder="Napište svůj názor"></textarea>
           <br><br>
 
-          <!-- Tlačítko Odeslat -->
+          <!-- Submin -->
           <button type="submit">Odeslat</button>
         </fieldset>
       </form>
