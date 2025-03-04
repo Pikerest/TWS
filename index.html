@@ -47,12 +47,6 @@
     </div>
   </header>
 
-  <!-- Toggle pro light/dark v pravém horním rohu -->
-  <div class="theme-toggle-wrapper">
-    <label for="themeSwitch">Dark/Light:</label>
-    <input type="checkbox" id="themeSwitch">
-  </div>
-
   <main class="home-layout">
 
     <!-- Carousel / Image Slider -->
@@ -89,8 +83,9 @@
     <section class="ti-hero-month" id="tiSection">
       <!-- TI video (levý horní) -->
       <div class="ti-video-container">
-        <video class="bg-video" autoplay muted loop playsinline preload="auto">
+        <video class="bg-video" autoplay muted loop playsinline preload="auto" controls>
           <source src="Videos/dota_montage.mp4" type="video/mp4">
+          <track kind="captions" src="captions.vtt" srclang="en" label="English" default />
           Váš prohlížeč nepodporuje video.
         </video>
         <div class="ti-overlay">
@@ -157,9 +152,10 @@
       <!-- Hero of the Month (pravý sloupec) -->
       <div class="hero-of-month" id="heroMonth">
         <h2>HERO OF THE MONTH</h2>
-        <a href="LegionCommander.html">
+        <a href="LegionCommander.html" aria-label="Více o Legion Commander">
           <video autoplay muted loop preload="auto">
             <source src="Videos/LegionCommander_Afk.webm" type="video/webm">
+            <track kind="captions" src="lc_captions.vtt" srclang="en" label="English" default />
           </video>
         </a>
         <p>LEGION COMMANDER</p>
